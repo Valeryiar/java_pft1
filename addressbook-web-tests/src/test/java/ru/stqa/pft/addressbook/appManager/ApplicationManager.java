@@ -1,8 +1,13 @@
 package ru.stqa.pft.addressbook.appManager;
 
+<<<<<<< HEAD
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+=======
+import org.openqa.selenium.By;
+import org.openqa.selenium.NoAlertPresentException;
+>>>>>>> parent of b6d73c1... создаем тест без рекордера
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.remote.BrowserType;
