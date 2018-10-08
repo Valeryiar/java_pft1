@@ -12,4 +12,12 @@ public class NavigationHelper extends HelperBase {
     public void gotoGroupPage() {
         click(By.linkText("groups"));
     }
+
+    public void goToHomePage() {
+        click(By.linkText("home"));
+    }
+
+    public void deleteGroup() {
+        click(By.xpath("//div[@id='content']/form[2]/div[2]/input"));
+    }
 }
