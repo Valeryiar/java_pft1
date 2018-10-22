@@ -39,7 +39,7 @@ public class ContactHelper extends HelperBase {
 
 
     public void selectContact() {
-        click(By.id("1"));
+        click(By.name("selected[]"));
     }
 
     public void initContactModification() {
@@ -52,5 +52,16 @@ public class ContactHelper extends HelperBase {
 
     public void returnToHomePage() {
         click(By.linkText("home page"));
+    }
+
+    public void createContact(ContactData contact) {
+        initContactCreation();
+        fillContactForm(new ContactData("name", "last", "email", "test1"), true);
+        submitContactCreation();
+    }
+
+    public boolean isThereAContact() {
+        return isElementPresent(By.name("selected[]"));
+
     }
 }
