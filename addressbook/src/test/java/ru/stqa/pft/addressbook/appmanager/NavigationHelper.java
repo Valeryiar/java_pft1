@@ -19,6 +19,6 @@ public class NavigationHelper extends HelperBase {
     }
 
     public void deleteGroup() {
-        click(By.xpath("//div[@id='content']/form[2]/div[2]/input"));
+        click(By.xpath("//div[@id='content']/form[2]/div[2]/input")); click(By.xpath("//div[@id='content']/form[2]/div[2]/input"));
     }
 }
