@@ -4,8 +4,9 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import ru.stqa.pft.addressbook.model.ContactData;
+import ru.stqa.pft.addressbook.model.TestBase;
 
-public class ContactCreationTests extends TestBase{
+public class ContactCreationTests extends TestBase {
 
 
     @Test
