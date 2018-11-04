@@ -3,11 +3,10 @@ package ru.stqa.pft.addressbook.tests;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import ru.stqa.pft.addressbook.model.ContactData;
-import ru.stqa.pft.addressbook.model.TestBase;
 
 public class ContactDeletionTests extends TestBase {
 
-    @Test
+    @Test(enabled=false)
     public void testContactDeletion (){
         app.getNavigationHelper().goToHomePage();
         int before = app.getContactHelper().getContactCount();
