@@ -12,7 +12,7 @@ import ru.stqa.pft.addressbook.model.ContactData;
 public class TestBase {
 
 
-    protected final ApplicationManager app = new ApplicationManager();
+    protected static final ApplicationManager app = new ApplicationManager();
 
     @BeforeSuite
     public void setUp() throws Exception {
