@@ -1,0 +1,177 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x0000000007d51958, pid=16892, tid=16568
+#
+# JRE version:  (10.0.2+13) (build )
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (10.0.2+13, mixed mode, aot, tiered, compressed oops, g1 gc, windows-amd64)
+# Problematic frame:
+# V  [jvm.dll+0x1c1958]
+#
+# No core dump will be written. Minidumps are not enabled by default on client versions of Windows
+#
+# If you would like to submit a bug report, please visit:
+#   http://bugreport.java.com/bugreport/crash.jsp
+#
+
+---------------  S U M M A R Y ------------
+
+Command Line: 
+
+Host: Intel(R) Core(TM) i7-3770K CPU @ 3.50GHz, 8 cores, 15G,  Windows 7 , 64 bit Build 7601 (6.1.7601.24260)
+Time: Tue Nov 06 10:04:10 2018 Belarus Standard Time elapsed time: 0 seconds (0d 0h 0m 0s)
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x000000000026f000):  JavaThread "Unknown thread" [_thread_in_vm, id=16568, stack(0x0000000001e40000,0x0000000001f40000)]
+
+Stack: [0x0000000001e40000,0x0000000001f40000],  sp=0x0000000001f3f4c0,  free space=1021k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [jvm.dll+0x1c1958]
+V  [jvm.dll+0x1bfe43]
+V  [jvm.dll+0x3519cb]
+V  [jvm.dll+0x6856a2]
+V  [jvm.dll+0x3ba0c3]
+V  [jvm.dll+0x3bc261]
+C  [java.exe+0x3531]
+C  [java.exe+0xe1af]
+C  [java.exe+0xe356]
+C  [kernel32.dll+0x159cd]
+C  [ntdll.dll+0x5385d]
+
+
+siginfo: EXCEPTION_ACCESS_VIOLATION (0xc0000005), reading address 0x0000000000000000
+
+
+Registers:
+RAX=0x0000bebf5998a261, RBX=0x0000000000000000, RCX=0x0000000000000000, RDX=0x0000000000000000
+RSP=0x0000000001f3f4c0, RBP=0x0000000000000000, RSI=0x000000000026f000, RDI=0x0000000000000000
+R8 =0x0000000000000006, R9 =0x0000000001f3eec8, R10=0x00000000002442a0, R11=0x0000000001f3ef42
+R12=0x0000000000000000, R13=0x00000000080e2ab0, R14=0x0000000001f3f918, R15=0x0000000000255088
+RIP=0x0000000007d51958, EFLAGS=0x0000000000010256
+
+Top of Stack: (sp=0x0000000001f3f4c0)
+0x0000000001f3f4c0:   0000000008331658 0000000008105c2d
+0x0000000001f3f4d0:   00000000083993c0 0000000008331658
+0x0000000001f3f4e0:   0000000000000040 0000000001f3f540
+0x0000000001f3f4f0:   000000000026b020 0000000008106075
+0x0000000001f3f500:   000000000026f000 0000000000000000
+0x0000000001f3f510:   0000000000000000 0000000008105957
+0x0000000001f3f520:   0000000000000000 0000000008156f79
+0x0000000001f3f530:   000000000026b020 0000000000000000
+0x0000000001f3f540:   0000000000000000 0000000000000000
+0x0000000001f3f550:   0000000000000004 00000000081575d8
+0x0000000001f3f560:   000000000026b020 0000bebf5998a261
+0x0000000001f3f570:   0000000000000004 0000000000000000
+0x0000000001f3f580:   00000000080e2ab0 000000000026f000
+0x0000000001f3f590:   0000000001f3f5d0 0000000007d4fe43
+0x0000000001f3f5a0:   0000000000000000 0000000001f3f5d0
+0x0000000001f3f5b0:   0000000000000000 0000000000000000 
+
+Instructions: (pc=0x0000000007d51958)
+0x0000000007d51938:   c0 00 00 00 48 8b 05 6d 1d 7a 00 48 33 c4 48 89
+0x0000000007d51948:   84 24 a8 00 00 00 48 8b e9 48 83 ca ff 48 ff c2
+0x0000000007d51958:   80 3c 0a 00 75 f7 33 f6 45 33 ed c6 44 24 30 01
+0x0000000007d51968:   85 d2 0f 8e 54 02 00 00 8b 0d e6 6d 81 00 65 48 
+
+
+
+---------------  P R O C E S S  ---------------
+
+Threads class SMR info:
+_java_thread_list=0x0000000000254fc0, length=0, elements={
+}
+
+Java Threads: ( => current thread )
+
+Other Threads:
+
+[error occurred during error reporting (printing all threads), id 0xc0000005]
+
+VM state:not at safepoint (not fully initialized)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+
+[error occurred during error reporting (printing compressed oops mode), id 0xc0000005]
+
+Deoptimization events (0 events):
+No events
+
+Classes redefined (0 events):
+No events
+
+Internal exceptions (0 events):
+No events
+
+Events (0 events):
+No events
+
+
+Dynamic libraries:
+0x000000013f9c0000 - 0x000000013f9fe000 	C:\Program Files\Java\jdk-10.0.2\bin\java.exe
+0x0000000076d60000 - 0x0000000076eff000 	C:\Windows\SYSTEM32\ntdll.dll
+0x0000000076c40000 - 0x0000000076d5f000 	C:\Windows\system32\kernel32.dll
+0x000007fefc940000 - 0x000007fefc9aa000 	C:\Windows\system32\KERNELBASE.dll
+0x00000000745e0000 - 0x0000000074675000 	C:\Windows\System32\SYSFER.DLL
+0x000007fefe910000 - 0x000007fefe9eb000 	C:\Windows\system32\ADVAPI32.dll
+0x000007fefd320000 - 0x000007fefd3bf000 	C:\Windows\system32\msvcrt.dll
+0x000007fefd910000 - 0x000007fefd92f000 	C:\Windows\SYSTEM32\sechost.dll
+0x000007fefccd0000 - 0x000007fefcdfd000 	C:\Windows\system32\RPCRT4.dll
+0x0000000076b40000 - 0x0000000076c3a000 	C:\Windows\system32\USER32.dll
+0x000007fefd2b0000 - 0x000007fefd317000 	C:\Windows\system32\GDI32.dll
+0x000007feff040000 - 0x000007feff04e000 	C:\Windows\system32\LPK.dll
+0x000007fefeef0000 - 0x000007fefefbb000 	C:\Windows\system32\USP10.dll
+0x000007fefb2e0000 - 0x000007fefb4d4000 	C:\Windows\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.7601.18837_none_fa3b1e3d17594757\COMCTL32.dll
+0x000007fefec90000 - 0x000007fefed01000 	C:\Windows\system32\SHLWAPI.dll
+0x000007fefb9d0000 - 0x000007fefb9dc000 	C:\Windows\system32\VERSION.dll
+0x000007fefe8e0000 - 0x000007fefe90e000 	C:\Windows\system32\IMM32.DLL
+0x000007fefe9f0000 - 0x000007fefeaf9000 	C:\Windows\system32\MSCTF.dll
+0x000007feefed0000 - 0x000007feeffbf000 	C:\Program Files\Java\jdk-10.0.2\bin\msvcr120.dll
+0x000007fef0f50000 - 0x000007fef0ff6000 	C:\Program Files\Java\jdk-10.0.2\bin\msvcp120.dll
+0x0000000007b90000 - 0x0000000008600000 	C:\Program Files\Java\jdk-10.0.2\bin\server\jvm.dll
+0x000007fef4bf0000 - 0x000007fef4bf9000 	C:\Windows\system32\WSOCK32.dll
+0x000007fefd260000 - 0x000007fefd2ad000 	C:\Windows\system32\WS2_32.dll
+0x000007fefccc0000 - 0x000007fefccc8000 	C:\Windows\system32\NSI.dll
+0x000007fef9e80000 - 0x000007fef9ebb000 	C:\Windows\system32\WINMM.dll
+0x0000000076f00000 - 0x0000000076f07000 	C:\Windows\system32\PSAPI.DLL
+0x000007fef9610000 - 0x000007fef961f000 	C:\Program Files\Java\jdk-10.0.2\bin\verify.dll
+0x000007fee2f60000 - 0x000007fee3085000 	C:\Windows\system32\DBGHELP.DLL
+0x000007fef3660000 - 0x000007fef3687000 	C:\Program Files\Java\jdk-10.0.2\bin\java.dll
+0x000007fef3610000 - 0x000007fef3626000 	C:\Program Files\Java\jdk-10.0.2\bin\zip.dll
+0x000007fef3910000 - 0x000007fef391a000 	C:\Program Files\Java\jdk-10.0.2\bin\jimage.dll
+
+dbghelp: loaded successfully - version: 4.0.5 - missing functions: none
+symbol engine: initialized successfully - sym options: 0x614 - pdb path: .;C:\Program Files\Java\jdk-10.0.2\bin;C:\Windows\SYSTEM32;C:\Windows\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.7601.18837_none_fa3b1e3d17594757;C:\Program Files\Java\jdk-10.0.2\bin\server
+
+VM Arguments:
+java_command: <unknown>
+java_class_path (initial): C:\Program Files\Java\jdk-10.0.1\lib
+Launcher Type: SUN_STANDARD
+
+Logging:
+Log output configuration:
+#0: stdout all=warning uptime,level,tags
+#1: stderr all=off uptime,level,tags
+
+Environment Variables:
+JAVA_HOME=C:\Program Files\Java\jdk-10.0.2\
+CLASSPATH=C:\Program Files\Java\jdk-10.0.1\lib
+PATH=C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Intel\DMIX;c:\Program Files (x86)\Microsoft SQL Server\100\Tools\Binn\VSShell\Common7\IDE\;c:\Program Files (x86)\Microsoft SQL Server\100\Tools\Binn\;c:\Program Files\Microsoft SQL Server\100\Tools\Binn\;c:\Program Files (x86)\Microsoft SQL Server\100\DTS\Binn\;C:\Program Files\TortoiseSVN\bin;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\nodejs\;C:\Program Files (x86)\Microsoft SQL Server\Client SDK\ODBC\130\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\140\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\140\DTS\Binn\;C:\Program Files (x86)\Microsoft SQL Server\140\Tools\Binn\ManagementStudio\;C:\Program Files\Java\jdk-10.0.2\bin;C:\Program Files\Java\jdk-10.0.1\bin;C:\Users\Valeryiad\AppData\Roaming\Dashlane\6.3.0.12323\bin\Firefox_Extension\{442718d9-475e-452a-b3e1-fb1ee16b8e9f}\components;C:\Users\Valeryiad\AppData\Roaming\Dashlane\6.3.0.12323\ucrt;C:\Users\Valeryiad\AppData\Roaming\Dashlane\6.3.0.12323\bin\Qt;C:\Users\Valeryiad\AppData\Roaming\Dashlane\6.3.0.12323\ucrt;C:\Users\Valeryiad\AppData\Roaming\Dashlane\6.3.0.12323\bin\Ssl;C:\Users\Valeryiad\AppData\Local\GitHubDesktop\bin;C:\Users\Valeryiad\AppData\Roaming\Dashlane\6.1843.0.14402\bin\Firefox_Extension\{442718d9-475e-452a-b3e1-fb1ee16b8e9f}\components;C:\Users\Valeryiad\AppData\Roaming\Dashlane\6.1843.0.14402\ucrt;C:\Users\Valeryiad\AppData\Roaming\Dashlane\6.1843.0.14402\bin\Qt;C:\Users\Valeryiad\AppData\Roaming\Dashlane\6.1843.0.14402\ucrt;C:\Users\Valeryiad\AppData\Roaming\Dashlane\6.1843.0.14
+USERNAME=valeryiar
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 58 Stepping 9, GenuineIntel
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows 7 , 64 bit Build 7601 (6.1.7601.24260)
+
+CPU:total 8 (initial active 8) 
+
+Memory: 4k page, physical 16672164k(4934140k free), swap 33342428k(20887308k free)
+
+vm_info: Java HotSpot(TM) 64-Bit Server VM (10.0.2+13) for windows-amd64 JRE (10.0.2+13), built on Jun 28 2018 01:57:56 by "mach5one" with MS VC++ 12.0 (VS2013)
+
+END.
