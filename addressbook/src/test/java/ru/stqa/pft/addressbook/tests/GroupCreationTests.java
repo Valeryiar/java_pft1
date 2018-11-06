@@ -10,21 +10,13 @@ import java.util.Comparator;
 import java.util.List;
 
 public class GroupCreationTests extends TestBase {
-    @BeforeMethod
-    public void ensurePreconditions () {
-        app.goTo().groupPage();
-        if (! app.group().isThereAGroup()) {
-            app.group().create(new GroupData("test1", null, null));
-        }
-
-    }
 
     @Test
     public void testGroupCreation() {
 
         app.goTo().groupPage();
         List<GroupData> before =app.group().list();
-        GroupData group=new GroupData("test2", null, null);
+        GroupData group=new GroupData().withName("test2");
         app.group().create(group);
         List <GroupData> after =app.group().list();
         Assert.assertEquals(after.size(), before.size()+1);
