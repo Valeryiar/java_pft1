@@ -12,9 +12,9 @@ import java.util.List;
 public class GroupCreationTests extends TestBase {
     @BeforeMethod
     public void ensurePreconditions () {
-        app.getNavigationHelper().gotoGroupPage();
-        if (! app.getGroupHelper().isThereAGroup()) {
-            app.getGroupHelper().createGroup(new GroupData("test1", null, null));
+        app.goTo().groupPage();
+        if (! app.group().isThereAGroup()) {
+            app.group().create(new GroupData("test1", null, null));
         }
 
     }
@@ -22,14 +22,11 @@ public class GroupCreationTests extends TestBase {
     @Test
     public void testGroupCreation() {
 
-        app.getNavigationHelper().gotoGroupPage();
-        List<GroupData> before =app.getGroupHelper(). getGroupList();
+        app.goTo().groupPage();
+        List<GroupData> before =app.group().list();
         GroupData group=new GroupData("test2", null, null);
-        app.getGroupHelper().initGroupCreation();
-        app.getGroupHelper().fillGroupForm(group);
-        app.getGroupHelper().submitGroupCreation();
-        app.getGroupHelper().returntoGroupPage();
-        List <GroupData> after =app.getGroupHelper(). getGroupList();
+        app.group().create(group);
+        List <GroupData> after =app.group().list();
         Assert.assertEquals(after.size(), before.size()+1);
 
 

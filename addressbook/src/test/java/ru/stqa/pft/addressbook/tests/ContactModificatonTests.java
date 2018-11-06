@@ -8,7 +8,7 @@ public class ContactModificatonTests extends TestBase {
 
     @Test(enabled=false)
     public void testContactModification(){
-        app.getNavigationHelper().goToHomePage();
+        app.goTo().goToHomePage();
         int before = app.getContactHelper().getContactCount();
         app.getContactHelper().selectContact();
         app.getContactHelper().initContactModification();
